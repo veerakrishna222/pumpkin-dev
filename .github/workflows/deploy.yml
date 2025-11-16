@@ -29,7 +29,7 @@ jobs:
 
     - name: Tag image
       run: |
-        docker tag my-app:latest ${{ steps.login-ecr.outputs.registry }}/nextjs-app-1:latest
+        docker tag nextjs-app-1:latest ${{ steps.login-ecr.outputs.registry }}/nextjs-app-1:latest
 
     - name: Push to ECR
       run: |
