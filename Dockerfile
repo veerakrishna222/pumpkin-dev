@@ -11,7 +11,7 @@ COPY package*.json ./
 # Install dependencies (preferably clean install)
 RUN npm install
 
-# Copy all source files
+# Copy all source  files
 COPY . .
 
 # Build the Next.js app (this creates .next folder)
