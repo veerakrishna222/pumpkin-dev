@@ -25,15 +25,15 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t my-app .
+        docker build -t nextjs-app-1 .
 
     - name: Tag image
       run: |
-        docker tag my-app:latest ${{ steps.login-ecr.outputs.registry }}/my-app:latest
+        docker tag my-app:latest ${{ steps.login-ecr.outputs.registry }}/nextjs-app-1:latest
 
     - name: Push to ECR
       run: |
-        docker push ${{ steps.login-ecr.outputs.registry }}/my-app:latest
+        docker push ${{ steps.login-ecr.outputs.registry }}/nextjs-app-1:latest
 
     - name: SSH & Deploy to EC2
       uses: appleboy/ssh-action@v0.1.10
