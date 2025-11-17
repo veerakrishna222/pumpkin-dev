@@ -5,7 +5,7 @@ FROM node:20 AS builder
 
 WORKDIR /app
 
-# Copy only package files first for efficient caching
+# Copy only package files  first for efficient caching
 COPY package*.json ./
 
 # Install dependencies (preferably clean install)
