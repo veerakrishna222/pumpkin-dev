@@ -4,3 +4,5 @@
 terraform.tfvars
 crash.log
 *.deb
+terraform/.terraform/
+
